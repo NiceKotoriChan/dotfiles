@@ -1,0 +1,29 @@
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots"
+
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_TYPE "wayland"
+}
+
+cursor {
+    xcursor-size 16
+	xcursor-theme "Adwaita"
+}
+
+debug { honor-xdg-activation-with-invalid-serial; }
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+blur {
+    passes 0
+    offset 3.0
+    noise 0.01
+    saturation 2.0
+}

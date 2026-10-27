@@ -1,0 +1,15 @@
+include "cfg/animation.kdl"
+include "cfg/autostart.kdl"
+include "cfg/gestures.kdl"
+include "cfg/inputs.kdl"
+include "cfg/keybinds.kdl"
+include "cfg/misc.kdl"
+include "cfg/outputs.kdl"
+include "cfg/rules.kdl"
+
+
+
+
+
+
+

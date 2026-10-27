@@ -1,0 +1,127 @@
+layer-rule {
+    match namespace="^noctalia-wallpaper*"
+    match namespace="^noctalia-backdrop"
+	match namespace="awww-daemon"
+	match namespace="rofi"
+    place-within-backdrop true
+}
+
+layer-rule {
+	match namespace="rofi"
+	opacity 0.9
+}
+window-rule {
+    draw-border-with-background false
+    opacity 0.9
+    open-floating true
+    background-effect {
+        blur true
+        xray true
+    }
+    shadow { on; }
+    focus-ring {
+        off
+    }
+    border {
+        off
+    }
+    default-column-width {
+        fixed 800
+    }
+    default-window-height {
+        fixed 600
+    }
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id="trae-cn"
+	match app-id="code-oss"
+    match app-id="chromium"
+    match app-id="libreoffice"
+    match app-id="org.kde.krita" title="^Krita$"
+    opacity 1.0
+    open-floating false
+    default-column-width {
+        proportion 1.0
+    }
+    default-window-height {
+        proportion 1.0
+    }
+}
+
+
+
+window-rule {
+    match title="Picture in picture"
+    opacity 1.0
+    open-floating true
+    default-column-width {
+        proportion 0.3
+    }
+    default-window-height {
+        proportion 0.3
+    }
+}
+
+
+window-rule {
+	match app-id="steam_app_default"
+    open-floating true
+    opacity 1.0
+    default-column-width {
+        fixed 1920
+    }
+    default-window-height {
+        fixed 1080
+    }
+}
+window-rule {
+    match app-id="Minecraft"
+    opacity 1.0
+    default-column-width {
+        fixed 1920
+    }
+    default-window-height {
+        fixed 1080
+    }
+}
+window-rule {
+	match app-id="steam"
+	match app-id="com.obsproject.Studio"
+	opacity 1.0
+    default-column-width {
+        proportion 0.4
+    }
+    default-window-height {
+        proportion 0.6
+    }
+}
+window-rule {
+    match app-id="chatgpt"
+    match app-id="wechat"
+    match app-id="discord"
+    match app-id="clash-verge"
+    default-column-width {
+        fixed 800
+    }
+    default-window-height {
+        fixed 600
+    }
+}
+window-rule {
+    match app-id="imv"
+    opacity 1.0
+    default-column-width {
+        fixed 640
+    }
+    default-window-height {
+        fixed 360
+    }
+}
+
+window-rule {
+    match app-id="mpv"
+    opacity 1.0
+}

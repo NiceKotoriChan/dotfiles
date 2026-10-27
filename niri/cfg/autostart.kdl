@@ -1,0 +1,5 @@
+//spawn-sh-at-startup "noctalia"
+
+ spawn-at-startup "awww-daemon"
+
+ spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"

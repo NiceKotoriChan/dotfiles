@@ -1,0 +1,67 @@
+output "eDP-1" {
+    // off
+    mode "3072x1920@120.002"
+    position x=2048 y=0
+}
+output "HDMI-A-1" {
+    mode "2560x1440@120.000"
+    position x=0 y=0
+}
+layout {
+    background-color "transparent"
+    preset-column-widths {
+        proportion 0.1
+        proportion 0.2
+        proportion 0.3
+        proportion 0.4
+        proportion 0.5
+        proportion 0.6
+        proportion 0.7
+        proportion 0.8
+        proportion 0.9
+        proportion 1.0
+    }
+    preset-window-heights {
+        proportion 0.1
+        proportion 0.2
+        proportion 0.3
+        proportion 0.4
+        proportion 0.5
+        proportion 0.6
+        proportion 0.7
+        proportion 0.8
+        proportion 0.9
+        proportion 1.0
+    }
+
+	focus-ring {
+        active-color   "#7aa2f7"
+        inactive-color "#1a1b26"
+        urgent-color   "#f7768e"
+    }
+
+    border {
+        active-color   "#7aa2f7"
+        inactive-color "#1a1b26"
+        urgent-color   "#f7768e"
+    }
+
+
+    tab-indicator {
+        active-color   "#7aa2f7"
+        inactive-color "#0940b5"
+        urgent-color   "#f7768e"
+    }
+
+    insert-hint {
+        color "#7aa2f780"
+    }
+
+}
+
+recent-windows {
+    highlight {
+        active-color "#7aa2f7"
+        urgent-color "#f7768e"
+    }
+}

@@ -1,0 +1,116 @@
+binds {
+    // application
+    Mod+A { spawn "chatgpt"; }
+    Mod+B { spawn-sh "chromium --profile-directory=Default --app-id=kbdhpemeclgiggljbfcmlnmibnmolaih"; } // cloudflare
+    Mod+C { spawn "code"; }
+    Mod+D { spawn-sh "rofi -show drun"; }
+    // spawn-sh "noctalia msg panel-toggle launcher"
+    Mod+E { spawn "nautilus"; }
+    Mod+F { fullscreen-window; }
+    Mod+G { spawn "lutris"; }
+    Mod+H { spawn-sh "chromium --profile-directory=Default --app-id=mjoklplbddabcmpepnokjaffbmgbkkgg"; }
+    Mod+L { spawn-sh "cliphist list | rofi -dmenu -theme-str 'listview { columns: 1; } element { orientation: horizontal; }' | cliphist decode | wl-copy"; }
+    Mod+M { maximize-column; }
+    Mod+N { center-column; }
+    Mod+I { focus-workspace-previous; }
+    Mod+O { toggle-window-rule-opacity; }
+    Mod+P { spawn-sh "mpv ~/Music/"; }
+    // spawn-sh "noctalia msg panel-toggle control-center"
+    Mod+Q { close-window; }
+    Mod+R { power-off-monitors; }
+    Mod+S { spawn-sh "noctalia msg settings-toggle"; }
+    Mod+T { spawn "alacritty"; }
+    Mod+V { toggle-window-floating; }
+    // github
+    Mod+W { spawn "chromium"; }
+    Mod+X { spawn-sh "chromium --profile-directory=Default --app-id=hmjcdonmhijmnefklekckjkeoknbiipb"; }
+    Mod+Y { spawn-sh ""; }
+    Mod+Z { spawn-sh "noctalia msg window-switcher"; }
+
+    Mod+TAB repeat=false { toggle-overview; }
+    CTRL+ALT+Delete { quit; }
+    Mod+ESCAPE allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    // 调整尺寸
+    Mod+Equal { switch-preset-column-width; }
+    Mod+Minus { switch-preset-column-width-back; }
+    Mod+Shift+Equal { switch-preset-window-height; }
+    Mod+Shift+Minus { switch-preset-window-height-back; }
+
+    // 上下左右
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-up; }
+    Mod+Down { focus-window-down; }
+    Mod+CTRL+Left { move-column-left; }
+    Mod+CTRL+Right { move-column-right; }
+    Mod+CTRL+UP { move-window-up; }
+    Mod+CTRL+Down { move-window-down; }
+    Mod+Shift+Left { focus-monitor-left; }
+    Mod+Shift+Right { focus-monitor-right; }
+    Mod+Shift+UP { focus-monitor-up; }
+    Mod+Shift+Down { focus-monitor-down; }
+    Mod+Shift+CTRL+Left { move-column-to-monitor-left; }
+    Mod+Shift+CTRL+Right { move-column-to-monitor-right; }
+    Mod+Shift+CTRL+UP { move-column-to-monitor-up; }
+    Mod+Shift+CTRL+Down { move-column-to-monitor-down; }
+
+    // 滚轮相关
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
+    Mod+CTRL+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+CTRL+WheelScrollUp cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+WheelScrollRight { focus-column-right; }
+    Mod+WheelScrollLeft { focus-column-left; }
+    Mod+CTRL+WheelScrollRight { move-column-right; }
+    Mod+CTRL+WheelScrollLeft { move-column-left; }
+    Mod+Shift+WheelScrollDown { focus-column-right; }
+    Mod+Shift+WheelScrollUp { focus-column-left; }
+    Mod+CTRL+Shift+WheelScrollDown { move-column-right; }
+    Mod+CTRL+Shift+WheelScrollUp { move-column-left; }
+
+    // 数字相关
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+CTRL+1 { move-column-to-workspace 1; }
+    Mod+CTRL+2 { move-column-to-workspace 2; }
+    Mod+CTRL+3 { move-column-to-workspace 3; }
+    Mod+CTRL+4 { move-column-to-workspace 4; }
+    Mod+CTRL+5 { move-column-to-workspace 5; }
+    Mod+CTRL+6 { move-column-to-workspace 6; }
+    Mod+CTRL+7 { move-column-to-workspace 7; }
+    Mod+CTRL+8 { move-column-to-workspace 8; }
+    Mod+CTRL+9 { move-column-to-workspace 9; }
+
+    // 多媒体键
+
+	Mod+Caps_Lock { spawn-sh "grim -g \"$(slurp)\" - | imv -"; }
+
+    XF86AudioRaiseVolume allow-when-locked=true {
+        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
+        // spawn-sh "noctalia msg volume-up"
+    }
+    XF86AudioLowerVolume allow-when-locked=true {
+        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
+        // spawn-sh "noctalia msg volume-down"
+    }
+    XF86AudioMute allow-when-locked=true {
+        spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+        // spawn-sh "noctalia msg volume-mute"
+    }
+    XF86MonBrightnessUp allow-when-locked=true {
+        spawn-sh "brightnessctl set +10%";
+        // spawn-sh "noctalia msg brightness-up"
+    }
+    XF86MonBrightnessDown allow-when-locked=true {
+        spawn-sh "brightnessctl set -10%";
+        // spawn-sh "noctalia msg brightness-down"
+    }
+}
